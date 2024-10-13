@@ -1,115 +1,6 @@
-![](media/image1.png){width="5.405660542432196in"
-height="5.405660542432196in"}
-
-# Tartalom {#tartalom .TOC-Heading}
-
-[Mi is ez valójában? [0](#mi-is-ez-valójában)](#mi-is-ez-valójában)
-
-[0.1 Mi az a verziókezelés?
-[0](#mi-az-a-verziókezelés)](#mi-az-a-verziókezelés)
-
-[0.2 Manuális (falusi) verziókezelés
-[0](#manuális-falusi-verziókezelés)](#manuális-falusi-verziókezelés)
-
-[0.3 Centralized Version Control Systems
-[1](#centralized-version-control-systems)](#centralized-version-control-systems)
-
-[0.4 Distributed Version Control Systems
-[1](#distributed-version-control-systems)](#distributed-version-control-systems)
-
-[Git [0](#git)](#git)
-
-[1. Letöltés és telepítés
-[0](#letöltés-és-telepítés)](#letöltés-és-telepítés)
-
-[2. Projekt létrehozása [5](#projekt-létrehozása)](#projekt-létrehozása)
-
-[2.1. git init [5](#git-init)](#git-init)
-
-[3. Követem vagy nem követem?
-[6](#követem-vagy-nem-követem)](#követem-vagy-nem-követem)
-
-[3.1. git status [6](#git-status)](#git-status)
-
-[3.2. git add [7](#git-add)](#git-add)
-
-[3.3. git rm --cached [8](#git-rm-cached)](#git-rm-cached)
-
-[4. Commitok [9](#commitok)](#commitok)
-
-[Vizuálisan [9](#vizuálisan-4)](#vizuálisan-4)
-
-[5. Előzmények [11](#előzmények)](#előzmények)
-
-[5.1. git log [11](#git-log)](#git-log)
-
-[6. Branchek [12](#branchek)](#branchek)
-
-[Vizuálisan [12](#vizuálisan-6)](#vizuálisan-6)
-
-[7. Branchek és a mergelés
-[15](#branchek-és-a-mergelés)](#branchek-és-a-mergelés)
-
-[7.1. git merge [15](#git-merge)](#git-merge)
-
-[7.2. git rebase [17](#git-rebase)](#git-rebase)
-
-[8. Mozgás Gitben [19](#mozgás-gitben)](#mozgás-gitben)
-
-[8.1. HEAD [19](#head)](#head)
-
-[8.2. Relatív Refs [21](#relatív-refs)](#relatív-refs)
-
-[9. Branch forcing [24](#branch-forcing)](#branch-forcing)
-
-[Vizuálisan [24](#vizuálisan-11)](#vizuálisan-11)
-
-[10. Változtatások visszaállítása
-[26](#változtatások-visszaállítása)](#változtatások-visszaállítása)
-
-[10.1. git reset [26](#git-reset)](#git-reset)
-
-[10.2. git revert [28](#git-revert)](#git-revert)
-
-[11. Mozgasd a munkád [30](#mozgasd-a-munkád)](#mozgasd-a-munkád)
-
-[11.1. git cherry-pick [30](#git-cherry-pick)](#git-cherry-pick)
-
-[11.2. git interactive rebase
-[31](#git-interactive-rebase)](#git-interactive-rebase)
-
-[12. Távoli repository [34](#távoli-repository)](#távoli-repository)
-
-[12.1. git clone [34](#git-clone)](#git-clone)
-
-[12.2. Távoli branchek [35](#távoli-branchek)](#távoli-branchek)
-
-[12.3. git fetch [36](#git-fetch)](#git-fetch)
-
-[12.4. git pull [38](#git-pull)](#git-pull)
-
-[12.5. git remote [39](#git-remote)](#git-remote)
-
-[12.6. git config [39](#git-config)](#git-config)
-
-[12.6. git push [40](#git-push)](#git-push)
-
-[12.7. Verzió eltérés [40](#verzió-eltérés)](#verzió-eltérés)
-
-[13. Távoli repo frissítés eldobás
-[44](#távoli-repo-frissítés-eldobás)](#távoli-repo-frissítés-eldobás)
-
-[13.1. Miért dobta el? [44](#miért-dobta-el)](#miért-dobta-el)
-
-[13.2. Megoldás [44](#megoldás)](#megoldás)
-
-[Források és ajánló [0](#források-és-ajánló)](#források-és-ajánló)
-
-[Ábrajegyzék [0](#ábrajegyzék)](#ábrajegyzék)
-
 # Mi is ez valójában?
 
-## 0.1 Mi az a verziókezelés? {#mi-az-a-verziókezelés}
+## 0.1 Mi az a verziókezelés?
 
 A verzió kezelés egy rendszer, ami időről időre rögzíti fájlok
 változtatásait, ezáltal visszalehet állítani a fájlt egy korábbi
@@ -119,7 +10,7 @@ egy projekt fejlesztését is. Azért is jó egy ilyen rendszert használni,
 mivel, ha elveszik valami egy fájlon és nincs kedved, türelmed
 újrakezdeni, akkor nagyon egyszerűen vissza lehet állítani.
 
-## 0.2 Manuális (falusi) verziókezelés {#manuális-falusi-verziókezelés}
+## 0.2 Manuális (falusi) verziókezelés
 
 Rengeteg embernek az a rendszere, hogy állományokat egy pl. időbélyeggel
 elnevezett mappába tesznek, mivel ez nagyon egyszerűen hangzik, viszont
@@ -129,12 +20,9 @@ Nagyon könnyű elfelejteni, melyik mappában van az ember és ezáltal rossz
 helyre történik, a fájlok másolása.
 
 ![A képen szöveg, képernyőkép, Betűtípus, szám látható Automatikusan
-generált leírás](media/image2.png){width="3.915906605424322in"
-height="3.3646926946631672in"}
+generált leírás](media/1.png)
 
-[]{#_Toc179738240 .anchor}1. ábra -- Local Version Control Systems
-
-## 0.3 Centralized Version Control Systems {#centralized-version-control-systems}
+## 0.3 Centralized Version Control Systems
 
 A központosított verzió kezelő rendszert (Centralized Version Control
 Systems, CVCS) még nagyon régen okos fejlesztők kidolgozták, ami nem
@@ -143,10 +31,7 @@ tudott szerkeszteni. Sok-sok ideig ez volt a megszokott mód a
 verziókezelésre.
 
 ![A képen szöveg, Betűtípus, sor, tervezés látható Automatikusan
-generált leírás](media/image3.png){width="4.691864610673666in"
-height="1.984423665791776in"}
-
-[]{#_Toc179738241 .anchor}2. ábra -- Centralized Version Control Systems
+generált leírás](media/2.png)
 
 ## 0.4 Distributed Version Control Systems {#distributed-version-control-systems}
 
@@ -159,14 +44,11 @@ vissza tudja másolni a szerverre a repositoryt azért, hogy
 visszaállítsa.
 
 ![A képen szöveg, képernyőkép, Betűtípus, diagram látható Automatikusan
-generált leírás](media/image4.png){width="3.287320647419073in"
-height="3.69497375328084in"}
-
-[]{#_Toc179738242 .anchor}3. ábra -- Distributed Version Control Systems
+generált leírás](media/3.png)
 
 # Git
 
-## 1. Letöltés és telepítés {#letöltés-és-telepítés}
+## 1. Letöltés és telepítés
 
 A Git-et a saját weboldaláról lehet letölteni, amit a következő linken
 érhetsz el:
@@ -179,10 +61,7 @@ a szolgáltatást.
 
 ![A képen szöveg, elektronika, számítógép, képernyőkép látható
 Automatikusan generált
-leírás](media/image5.png){width="3.9159744094488187in"
-height="3.0487784339457566in"}
-
-[]{#_Toc179738243 .anchor}4. ábra -- Git weboldala
+leírás](media/4.png)
 
 Ha Windowsra szeretnél telepíteni, akkor a letöltések (Downloads) közül
 a Windowst kell kiválasztanod, majd kattints vagy a 64-bit for Windows
@@ -190,38 +69,26 @@ Setupra vagy a 32-bit Git for Windows Setup csomagra a Standalone
 Installer közül. Ezek után egy már jól ismert telepítő varázsló fog
 megnyílni a letöltés után, amint elindítod a .exe fájlt.
 
-![](media/image6.png){width="3.8858267716535435in"
-height="1.7278904199475065in"}
-
-[]{#_Toc179738244 .anchor}5. ábra -- Telepítés Windowsra
+![](media/5.png)
 
 A varázslóban először, mint minden szoftvernél a license jelenik, miután
 erősen tanulmányoztad kattints a Next gombra.
 
 ![A képen szöveg, képernyőkép, Betűtípus, szoftver látható Automatikusan
-generált leírás](media/image7.png){width="3.641732283464567in"
-height="2.879826115485564in"}
-
-[]{#_Toc179738245 .anchor}6. ábra- Git installer license
+generált leírás](media/6.png)
 
 Majd a programnak válaszd ki azt a helyet a számítógépeden, ahova
 telepíteni szeretnéd.
 
 ![A képen szöveg, képernyőkép, szoftver, Számítógépes ikon látható
 Automatikusan generált
-leírás](media/image8.png){width="3.650987532808399in"
-height="2.890767716535433in"}
-
-[]{#_Toc179738246 .anchor}7. ábra -- Git installer destination
+leírás](media/7.png)
 
 Ezek után komponenseket tudsz még az alapokon kívűl kijelölni. Én ezt
 alapbeállításon hagytam, mivel nem volt számomra releváns komponens.
 
 ![A képen szöveg, képernyőkép, szoftver, Weblap látható Automatikusan
-generált leírás](media/image9.png){width="3.641732283464567in"
-height="2.9111373578302713in"}
-
-[]{#_Toc179738247 .anchor}8. ábra -- Git installer components
+generált leírás](media/8.png)
 
 A következő beállításokat nem fogom részletezni, ha valamit nem értesz
 vagy meg szeretnéd ismerni, hogy mit csinál keress utána az Internet
@@ -239,12 +106,10 @@ félj a kalandoktól, fedezd fel a Vim-et.
 </colgroup>
 <thead>
 <tr class="header">
-<th><img src="media/image10.png"
-style="width:0.85217in;height:0.85217in"
-alt="Világító villanykörte körvonalas" /></th>
-<th><p><strong>Tipp!</strong></p>
+<th><p><strong>Tipp!</strong></p></th>
+<td>
 <p>Csak a Next gombot kell nyomni, amíg el nem érsz egy Install gombhoz,
-amivel szerintem tudod mit kell csinálnod….kattints rá….</p></th>
+amivel szerintem tudod mit kell csinálnod….kattints rá….</p></td>
 </tr>
 </thead>
 <tbody>
@@ -255,216 +120,174 @@ Amint feltelepült a program, egy GitBash nevű programot kell keresned a
 számítógépeden, amellyel el tudod indítani ezt a szuper programot.
 
 ![A képen szöveg, képernyőkép, szoftver, Weblap látható Automatikusan
-generált leírás](media/image12.png){width="2.9291338582677167in"
-height="2.2940365266841645in"}![A képen szöveg, képernyőkép, szoftver,
+generált leírás](media/9.png)
+![A képen szöveg, képernyőkép, szoftver,
 Weblap látható Automatikusan generált
-leírás](media/image13.png){width="3.0003947944007in"
-height="2.295275590551181in"}
-
-[]{#_Toc179738248 .anchor}9. ábra -- Git installer start menu folder &
-default editor
-
+leírás](media/10.png)
 ![A képen szöveg, képernyőkép, Weblap, Betűtípus látható Automatikusan
-generált leírás](media/image14.png){width="2.9375in"
-height="2.295138888888889in"}![A képen szöveg, képernyőkép, szoftver,
+generált leírás](media/11.png)
+![A képen szöveg, képernyőkép, szoftver,
 Weblap látható Automatikusan generált
-leírás](media/image15.png){width="2.9827734033245843in"
-height="2.295275590551181in"}
-
-[]{#_Toc179738249 .anchor}![A képen szöveg, képernyőkép, szoftver,
+leírás](media/12.png)
+![A képen szöveg, képernyőkép, szoftver,
 Weblap látható Automatikusan generált
-leírás](media/image16.png){width="2.901314523184602in"
-height="2.295275590551181in"}10. ábra -- Git installer name of the
-initial branch & PATH environment
-
+leírás](media/13.png)
 ![A képen szöveg, képernyőkép, szoftver, Weblap látható Automatikusan
-generált leírás](media/image17.png){width="2.960298556430446in"
-height="2.295275590551181in"}
-
-[]{#_Toc179738250 .anchor}11. ábra -- Git installer SSH & HTTPS
-transport
-
+generált leírás](media/14.png)
 ![A képen szöveg, képernyőkép, Betűtípus, szoftver látható Automatikusan
-generált leírás](media/image18.png){width="2.940234033245844in"
-height="2.295275590551181in"}![A képen szöveg, képernyőkép, Betűtípus,
+generált leírás](media/15.png)
+![A képen szöveg, képernyőkép, Betűtípus,
 szoftver látható Automatikusan generált
-leírás](media/image19.png){width="2.934847987751531in"
-height="2.295275590551181in"}
-
-[]{#_Toc179738251 .anchor}12. ábra -- Git installer line endings &
-terminal
+leírás](media/16.png)
 
 ![A képen szöveg, képernyőkép, szoftver, Weblap látható Automatikusan
-generált leírás](media/image20.png){width="2.9159722222222224in"
-height="2.295138888888889in"}![A képen szöveg, képernyőkép, szoftver,
+generált leírás](media/17.png)
+![A képen szöveg, képernyőkép, szoftver,
 Betűtípus látható Automatikusan generált
-leírás](media/image21.png){width="2.92413167104112in"
-height="2.295275590551181in"}
-
-[]{#_Toc179738252 .anchor}13. ábra -- Git installer behavior of git pull
-& credential helper
-
+leírás](media/18.png)
 ![A képen szöveg, képernyőkép, szoftver, Weblap látható Automatikusan
-generált leírás](media/image22.png){width="2.92413167104112in"
-height="2.295275590551181in"}
+generált leírás](media/19.png)
 
-[]{#_Toc179738253 .anchor}14. ábra -- Git installer extra options
+## 2. Projekt létrehozása
 
-## 2. Projekt létrehozása {#projekt-létrehozása}
+### 2.1. git init
 
-### 2.1. git init {#git-init}
-
-A git init parancs egy üres Git tárolót készít vagy újra inicializál egy
+A `git init` parancs egy üres Git tárolót készít vagy újra inicializál egy
 már meglévőt. Magyarul ezzel hozod létre magát a Git-et egy mappán
 belül, ezek után tudja a Git a verziókezeléses munkáját elkezdni.
 
-Ez egy .git mappát hoz létre, amiben több almappa is található a Git
+Ez egy `.git ` mappát hoz létre, amiben több almappa is található a Git
 program számára, ha nem értesz hozzá és nem akarsz napokat szórakozni,
 ha el állítasz valamit, akkor inkább ne változtass benne semmit...én
 szóltam...
 
-git init
+`git init`
 
 #### Vizuálisan
 
-A saját környezetemen létrehoztam egy test_git mappát a D:/ meghajtómon,
+A saját környezetemen létrehoztam egy `test_git` mappát a `D:/` meghajtómon,
 majd ebbe a mappába beléptem a GitBash nevű program segítségével.
 
 Ahhoz, hogy ezt elérjem a GitBash nevű programmal a következő
 parancsokat használtam:
 
-Átváltottam a d:/ meghajtóra.
+Átváltottam a `d:/` meghajtóra.
 
-cd d:/
+`cd d:/`
 
-Majd létrehoztam egy test_git mappát.
+Majd létrehoztam egy `test_git` mappát.
 
-mkdir test_git
+mkdir `test_git`
 
 Beléptem ebbe a mappába.
 
-cd test_git
+cd `test_git`
 
-Majd kiadtam a git init parancsot, hogy a Git lássa ezt a mappát.
+Majd kiadtam a `git init` parancsot, hogy a Git lássa ezt a mappát.
 
-git init
+`git init`
 
 A GitBashbe a 15.ábra mutatja a parancsokat sorba.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image23.png){width="3.4539884076990375in"
-height="1.885919728783902in"}
+leírás](media/20.png)
 
-[]{#_Toc179738254 .anchor}15. ábra -- GitBashbe a git init parancs
+## 3. Követem vagy nem követem?
 
-## 3. Követem vagy nem követem? {#követem-vagy-nem-követem}
+### 3.1. `git status`
 
-### 3.1. git status {#git-status}
-
-A git status paranccsal meg tudod vizsgálni azt, hogy melyik állományt
+A `git status` paranccsal meg tudod vizsgálni azt, hogy melyik állományt
 követi a Git és melyiket nem, illetve azt is látod, hogy mi van
 hozzáadva a stage-re és mi nem.
 
 Ha nem érted még az előző mondatot, nem baj mindjárt részletezem mi mit
 jelent.
 
-git status
+`git status`
 
 #### Vizuálisan
 
-Ha most adod ki a git status parancsot a GitBashben, akkor egy hasonló
+Ha most adod ki a `git status` parancsot a GitBashben, akkor egy hasonló
 üzenetet kell, hogy kapj válaszként.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image24.png){width="4.270805993000875in"
-height="1.3045636482939633in"}
+leírás](media/21.png)
 
-[]{#_Toc179738255 .anchor}16. ábra -- git status üres mappában
-
-Viszont, amint létrehozunk egy fájlt, esetünkben egy alma.txt állományt
-csináltam, majd kiadtam újra a git status parancsot és máris érdekesebbé
+Viszont, amint létrehozunk egy fájlt, esetünkben egy `alma.txt` állományt
+csináltam, majd kiadtam újra a `git status` parancsot és máris érdekesebbé
 vált a helyzet.
 
 ![A képen szöveg, képernyőkép, Betűtípus, szoftver látható Automatikusan
-generált leírás](media/image25.png){width="4.2637795275590555in"
-height="1.8085345581802275in"}
+generált leírás](media/22.png)
 
-[]{#_Toc179738256 .anchor}17. ábra -- git status állománnyal a mappában
-
-Láthatjuk a 17.ábrán, hogy létrehoztunk egy alma.txt-t, majd kiadtuk a
-git status utasítást. Ezek után láthatjuk, hogy van egy alma.txt fájl az
+Láthatjuk a 17.ábrán, hogy létrehoztunk egy `alma.txt`-t, majd kiadtuk a
+`git status` utasítást. Ezek után láthatjuk, hogy van egy `alma.txt` fájl az
 Untracked files (állományok, amelyeket nem követ a Git) között. Ezt a
 Git egy másik színnel is jelöli, esetünkben pirossal.
 
-### 3.2. git add {#git-add}
+### 3.2. `git add`
 
-A git add paranccsal fel lehet venni adott fájlt vagy fájlokat a Git
+A `git add` paranccsal fel lehet venni adott fájlt vagy fájlokat a Git
 azon állományai közé, amelyeknek követni fogja a verzióját.
 
-git add \<fájl\>
+`git add` \<fájl\>
 
 Erre úgy kell gondolnod, mintha például lenne egy színház egy üres
 színpaddal, viszont a nézőtér tele van emberrel, nálunk a nézőtér a
-test_git mappa, az embereink pedig csak az alma.txt, hát mit ne mondjak
+`test_git` mappa, az embereink pedig csak az `alma.txt`, hát mit ne mondjak
 még nem jöttek el sokan az előadásra. Azonban Te, mint színház igazgató
-felhívod a színpadra az alma.txt-t és innentől kezdve a színpadon lévő
+felhívod a színpadra az `alma.txt`-t és innentől kezdve a színpadon lévő
 emberrel általában mit csinál a közönség? Ugye elkezdik követni a
 szemével. A Git is ugyanezt teszi a mi esetünkben.
 
 Természetesen létezik könnyítés az utasításhoz, hogy ne kelljen minden
 fájt egyesével beírni, hogy felkerüljön a színpadra. Van ugyanis egy
-univerzális mesteri karakter a (.), amit, ha az add után teszünk, minden
+univerzális mesteri karakter a (`.`), amit, ha az add után teszünk, minden
 fájl, ami a mappában található felkerül a színpadra, beleértve a
 fájlokat, mappákat, almappákat stb. Így néz ki a parancs ezzel az ördögi
 karakterrel:
 
-git add .
+`git add` .
 
 #### Vizuálisan
 
-Szóval, ha kiadjuk a git add parancsot a következő képpen:
+Szóval, ha kiadjuk a `git add` parancsot a következő képpen:
 
-git add alma.txt
+`git add` `alma.txt`
 
 Majd megnézzük, hogy mit követ a Git vagy úgy is mondhatnám
 ellenőrizzük, hogy mi változott a mappánkban.
 
-git status
+`git status`
 
 Akkor egy ilyen helyzettel állunk szembe, amelyet a 18.ábra mutat.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image26.png){width="3.508546587926509in"
-height="2.3306167979002623in"}
+leírás](media/23.png)
 
-[]{#_Toc179738257 .anchor}18. ábra -- git add utasítás
-
-Láthatjuk, hogy hozzáadtuk az alma txt-t, majd kiadtuk a git status
-parancsot és máris azok közé a fájlok közé tartozik az alma.txt,
+Láthatjuk, hogy hozzáadtuk az alma txt-t, majd kiadtuk a `git status`
+parancsot és máris azok közé a fájlok közé tartozik az `alma.txt`,
 amelyeket a Git követ. Vizsgáljuk meg és vegyük észre, hogy a képen már
 más színnel van jelölve az a fájl, amelyről a Git verzió kezelést
 csinál.
 
-### 3.3. git rm --cached {#git-rm-cached}
+### 3.3. `git rm --cached`
 
-A git rm --cached utasítással, azt érjük el, hogy lehívjuk a színpadról
+A `git rm --cached` utasítással, azt érjük el, hogy lehívjuk a színpadról
 az adott állományokat, amelyek a parancs végén szerepelnek.
 
-git rm ---cached \<fájl\>
+`git rm --cached `\<fájl\>
 
 #### Vizuálisan
 
 Amint kiadom a parancsot, máris nem fogja követni a Git az adott fájlt.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image27.png){width="4.632179571303587in"
-height="2.0740649606299213in"}
+leírás](media/24.png)
 
-[]{#_Toc179738258 .anchor}19. ábra -- git rm
+Látod visszament az `alma.txt` a nézők közé.
 
-Látod visszament az alma.txt a nézők közé.
-
-## 4. Commitok {#commitok}
+## 4. Commitok
 
 A commit egy Git tárolóban pillanatképet készít az összes olyan
 állományról, ami úgymond trackelve (követve) van a könyvtárban. Ez
@@ -482,12 +305,12 @@ A commitok között lehet váltani is, ami nagyon gyorsan történik.
 
 Az alap parancs a következőképpen néz ki:
 
-git commit
+`git commit`
 
 Ez még kiegészül még pl. a -m opcióval. Ezáltal megjegyzést tudsz és
 kell is írnod egyes commitokhoz.
 
-git commit -m „megjegyzésem"
+`git commit` -m „megjegyzésem"
 
 ### Vizuálisan
 
@@ -502,14 +325,14 @@ git commit -m „megjegyzésem"
 <th colspan="2">A jobboldalon egy kisebb Git repository található. Két
 commit van benne eddig. Az első a kezdeti commit C0 és van egy másik
 utána C1.</th>
-<th><img src="media/image28.png"
+<th><img src="media/25.png"
 style="width:1.77986in;height:1.59583in"
 alt="A képen Grafika, rajzfilm, pink, szív látható Automatikusan generált leírás" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image29.png"
+<td><img src="media/26.png"
 style="width:1.61401in;height:2.34006in" /></td>
 <td colspan="2"><p>Ha kiadunk egy újabb parancsot:</p>
 <p>git commit</p>
@@ -526,22 +349,19 @@ visszaszeretnénk menni a commitokban egyszerűbben megtaláljunk a
 számunkra megfelelőt.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image30.png){width="4.68380905511811in"
-height="1.1603652668416449in"}
+leírás](media/27.png)
 
-[]{#_Toc179738259 .anchor}20. ábra - git commit
+## 5. Előzmények
 
-## 5. Előzmények {#előzmények}
+### 5.1. `git log`
 
-### 5.1. git log {#git-log}
-
-A git log paranccsal kitudjuk íratni a képernyőre a commitok teljes
+A `git log` paranccsal kitudjuk íratni a képernyőre a commitok teljes
 előzményét. Ezzel látjuk a commit hashét, branchet, a HEAD-et, a
 készítőt (névvel, emailel, illetve egyéb beállításokkal, ha megadjuk
 azokat), a dátumot, hogy mikor készült a commit, illetve látjuk a
 leírást is.
 
-git log
+`git log`
 
 Létezik a parancsnak egy hosszabb verziója, amely azonban lerövidíti az
 előzményeket, így nem fogjuk látni a teljes leírást és a commithoz
@@ -551,27 +371,21 @@ képernyőn.
 
 Ez a következő utasítással tehetjük meg:
 
-git log \--oneline
+`git log --oneline`
 
 #### Vizuálisan
 
 Amint kiadjuk az utasítást a 21.ábrához hasonló eredményt fogunk látni.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image31.png){width="4.669291338582677in"
-height="1.3752023184601925in"}
-
-[]{#_Toc179738260 .anchor}21. ábra -- git log
+leírás](media/28.png)
 
 A rövidített változat valahogy a 22.ábra szerint fog kinézni.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image32.png){width="4.669291338582677in"
-height="0.972769028871391in"}
+leírás](media/29.png)
 
-[]{#_Toc179738261 .anchor}22. ábra -- git log -oneline
-
-## 6. Branchek {#branchek}
+## 6. Branchek
 
 A branchek a Git-ben szintén kis helyeket foglalnak el. Ezek lényegében
 mutatók (pointers) egy bizonyos commitra. Ezért szokták mondani, hogy
@@ -587,25 +401,25 @@ tartalmazni, ennek a munkának."
 
 Az alap parancs a következő:
 
-git branch \<név\>
+`git branch <név>`
 
 Ahhoz, hogy az adott branchbe átlépjünk a
 
-git checkout \<név\>
+`git checkout <név>`
 
 prancsot kell használni.
 
 A lusták, akik a két parancsot egybe akarják végrehajtani a következő
 módon tehetik meg:
 
-git checkout -b \<név\>
+`git checkout -b <név>`
 
 Ha elfelejtettük volna, hogy milyen branchek léteznek szimplán írjuk be
-a git branch utasítást, úgy, hogy semmilyen név nem szerepel utána.
+a `git branch` utasítást, úgy, hogy semmilyen név nem szerepel utána.
 
 Ez ki listázza a brancheket.
 
-git branch
+`git branch`
 
 ### Vizuálisan
 
@@ -620,13 +434,13 @@ git branch
 <th colspan="2">Itt fogunk létrehozni egy új branchet newImage néven a
 követező paranccsal:<br />
 git branch newImage</th>
-<th><img src="media/image33.png"
+<th><img src="media/30.png"
 style="width:1.49882in;height:1.59847in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image34.png"
+<td><img src="media/31.png"
 style="width:1.4721in;height:1.67036in" /></td>
 <td colspan="2"><p>Most, így a newImage a C1-es commitra hivatkozik és
 tartalmazza az előzőket is.</p>
@@ -637,11 +451,11 @@ C1-et, ami utána van már nem.</p></td>
 <td colspan="2">Viszont, ha most commitolunk, akkor a main branch mozog,
 viszont a newImage nem. Ez azért van, mivel nem a newImage branchben
 álltunk ezt a (*) jelöli.</td>
-<td><img src="media/image35.png"
+<td><img src="media/32.png"
 style="width:1.425in;height:2.27917in" /></td>
 </tr>
 <tr class="odd">
-<td><img src="media/image36.png"
+<td><img src="media/33.png"
 style="width:1.39576in;height:2.57631in" /></td>
 <td colspan="2"><p>A Git-nek meg kell mondanunk, hogy branchet
 szeretnénk váltani, ezt a git checkout &lt;név&gt; parancs kiadásával
@@ -656,10 +470,7 @@ commitolunk.</p>
 GitBashben így néznek ki az utasítások:
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image37.png){width="3.111794619422572in"
-height="2.102564523184602in"}
-
-[]{#_Toc179738262 .anchor}23. ábra -- git branchek
+leírás](media/34.png)
 
 Kérdezhetnéd, hogy ez most miért jó? Hát azért, mert ha most egy képet
 teszek a newImage branchbe akkor az csak ott fog látszódni, míg a
@@ -671,35 +482,26 @@ Természetesen, ha beleteszünk valamit a newImage branchbe el is kell
 commitolni a változásokat, majd csak utána lehet branchet váltani.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image38.png){width="3.1192432195975504in"
-height="2.0153816710411196in"}
-
-[]{#_Toc179738263 .anchor}24. ábra -- branch különbségek
+leírás](media/35.png)
 
 Látod a newImage branchbe létezik egy kep_a_branchekrol.png. Ezt a már
-ismert utasításokkal értem el. git add és git commit. Amikor átváltottam
+ismert utasításokkal értem el. `git add` és `git commit`. Amikor átváltottam
 a master branchbe és azt is kilistáztam, ott már nem látható a kép. A
 commit előzmények is különböznek, ha megnézzük őket.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image39.png){width="4.0603718285214345in"
-height="1.6940627734033247in"}
-
-[]{#_Toc179738264 .anchor}25. ábra -- git log newImage
+leírás](media/36.png)
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image40.png){width="3.9803149606299213in"
-height="0.9027515310586177in"}
+leírás](media/37.png)
 
-[]{#_Toc179738265 .anchor}26. ábra git log master
-
-Amint látod a newImage branchbe létezik egy commit (c10e6bc), amely a
+Amint látod a newImage branchbe létezik egy commit (`c10e6bc`), amely a
 masterbe nincs jelen. Azt is látjuk newImage logjába, hogy hol tart a
 master branch.
 
-## 7. Branchek és a mergelés {#branchek-és-a-mergelés}
+## 7. Branchek és a mergelés
 
-### 7.1. git merge {#git-merge}
+### 7.1. git merge
 
 Most, hogy tudunk commitelni és branchelni, valahogy kombinálni kéne a
 munkánkat különböző branchekből. Ez az tudja, hogy különböző pl.
@@ -710,7 +512,7 @@ commitot hoz létre, aminek két egyedi szülője van. Egy commit két
 szülővel azt jelenti, hogy az A szülő munkáit és a másik B szülő munkáit
 is szeretném tartalmazni.
 
-git merge \<név\>
+`git merge <név>`
 
 <table>
 <colgroup>
@@ -719,10 +521,9 @@ git merge \<név\>
 </colgroup>
 <thead>
 <tr class="header">
-<th><img src="media/image41.png" style="width:1in;height:1in"
-alt="Felkiáltójel egyszínű kitöltéssel" /></th>
-<th><p><strong>Figyelj!</strong></p>
-<p>Oda mergelsz, ahol éppen állsz!</p></th>
+<th><p><strong>Figyelj!</strong></p></th>
+<td>
+<p>Oda mergelsz, ahol éppen állsz!</p></td>
 </tr>
 </thead>
 <tbody>
@@ -744,13 +545,13 @@ commitja C2 és C3. Ez azt jelenti, hogy egyik branch sem tartalmazza a
 másik branch commitját. Ahhoz, hogy a main branch lássa a bugFix
 munkáját, ahhoz mergelni kell.</p>
 <p>git merge bugFix</p></th>
-<th><img src="media/image43.png"
+<th><img src="media/38.png"
 style="width:1.86682in;height:1.95995in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image44.png"
+<td><img src="media/39.png"
 style="width:1.89067in;height:2.56995in" /></td>
 <td colspan="2"><p>Így most a main egy olyan commitra mutat, aminek két
 szülője van.</p>
@@ -765,12 +566,9 @@ majd átléptem a master branchbe és összemergeltem a bugFixet a
 masterrel. Így már a master is tartalmazza a bugFix kép állományát.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image45.png){width="3.6081944444444445in"
-height="2.532356736657918in"}
+leírás](media/40.png)
 
-[]{#_Toc179738266 .anchor}27. ábra mergelés
-
-### 7.2. git rebase {#git-rebase}
+### 7.2. git rebase
 
 A másik módja, hogy egyesítsük a branchaket a rebase. A rebase fog egy
 bizonyos mennyiségű commitot és „kivágja" őket, majd beszúrja azokat
@@ -780,7 +578,7 @@ Amíg ez egy kicsit összekavarhat, addig a rebasenek van egy előnye, ami
 nem más, hogy egy szép egyenes commit sort kapunk, ami nem ágazik
 ezernyi felé, így a log szebben követhető.
 
-git rebase \<név\>
+`git rebase <név>`
 
 <table>
 <colgroup>
@@ -789,7 +587,7 @@ git rebase \<név\>
 </colgroup>
 <thead>
 <tr class="header">
-<th><img src="media/image41.png" style="width:1in;height:1in"
+<th><img src="media/41.png" style="width:1in;height:1in"
 alt="Felkiáltójel egyszínű kitöltéssel" /></th>
 <th><p><strong>Figyelj!</strong></p>
 <p>Az adott branchet, ahol állunk mozgatjuk, egy másik branch alá, amit
@@ -817,13 +615,13 @@ bugFixben állunk.</p>
 <p>A munkánkat úgy szeretnénk mozgatni, hogy úgy tűnjön a main-ből
 fejlődött, míg valójában egy teljesen másik univerzumban.</p>
 <p>git rebase main</p></th>
-<th><img src="media/image46.png"
+<th><img src="media/41.png"
 style="width:1.72338in;height:2.43796in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td colspan="2"><img src="media/image47.png"
+<td colspan="2"><img src="media/42.png"
 style="width:1.84339in;height:2.43171in" /></td>
 <td colspan="3"><p>Most a munkánk úgy néz ki, mintha szépen egy sorban
 fejlődött volna.</p>
@@ -835,11 +633,11 @@ el homályosodott a kis fánkban.</p>
 <td colspan="3"><p>Hajtsunk végre egy checkoutot mainra, majd
 rebaseeljünk a bugFixbe.</p>
 <p>git rebase bugFix</p></td>
-<td colspan="2"><img src="media/image48.png"
+<td colspan="2"><img src="media/43.png"
 style="width:1.80195in;height:2.1737in" /></td>
 </tr>
 <tr class="odd">
-<td><img src="media/image49.png"
+<td><img src="media/44.png"
 style="width:1.83996in;height:2.2932in" /></td>
 <td colspan="4">Mivel a main csak egy őse volt a bugFixnek, ezért a git
 csak fogta és előbbre tette a main mutatóját a történtekben vagyis a
@@ -854,18 +652,15 @@ rebaseltem a mastert a bugFixre, utána már tartalmazza az
 ez_a_bug_fix.txt-t a master is.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image50.png){width="3.4330489938757656in"
-height="2.7626476377952756in"}
+leírás](media/45.png)
 
-[]{#_Toc179738267 .anchor}28. ábra -- git rebase
-
-## 8. Mozgás Gitben {#mozgás-gitben}
+## 8. Mozgás Gitben
 
 Mielőtt komolyabb parancsokat néznénk a Gitben, előtte fontos, hogy
 megértsünk különböző módszereket arra, amivel a commitok között tudunk
 lépdelni.
 
-### 8.1. HEAD {#head}
+### 8.1. HEAD
 
 Annak a commitnak a szimbolikus neve HEAD, ami éppen checkoutolva van,
 ez az a commit, amin éppen dolgozol.
@@ -892,16 +687,16 @@ látható.
 után.</p>
 <p>git checkout C1;</p>
 <p>git checkout main;</p></th>
-<th><img src="media/image51.png"
+<th><img src="media/46.png"
 style="width:1.28387in;height:1.55107in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image52.png"
+<td><img src="media/47.png"
 style="width:1.74517in;height:2.5063in" /></td>
 <td colspan="2"><p>A HEAD, mindig a main branchünk alatt bújkált.</p>
-<p>git commit;</p>
+<p>```git commit```;</p>
 <p>git checkout C2;</p></td>
 </tr>
 </tbody>
@@ -921,13 +716,13 @@ style="width:1.74517in;height:2.5063in" /></td>
 egy commithoz kötjük egy branch helyett.</p>
 <p>Változtatás előtt, így néz ki a hozzárendelés:</p>
 <p>HEAD -&gt; main -&gt; C1</p></th>
-<th><img src="media/image53.png"
+<th><img src="media/48.png"
 style="width:1.1818in;height:1.69229in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image54.png"
+<td><img src="media/49.png"
 style="width:1.71955in;height:1.82578in" /></td>
 <td colspan="2"><p>Miután checkoutolunk C1-re, így néz ki a
 hozzárendelés:</p>
@@ -940,16 +735,13 @@ GitBashben kiírattam a rövidebb módon a master logjait, majd
 checkoutoltam a legelső commitra, ami a 192ad61 hash névre hallgat.
 
 ![A képen szöveg, képernyőkép látható Automatikusan generált
-leírás](media/image55.png){width="4.811464348206474in"
-height="4.227003499562555in"}
+leírás](media/50.png)
 
-[]{#_Toc179738268 .anchor}29. ábra -- git HEAD
-
-### 8.2. Relatív Refs {#relatív-refs}
+### 8.2. Relatív Refs
 
 Ahhoz, hogy Gitben mozogjunk meg kell adni a commit hashét, ami kicsit
 bonyolult tud lenni. Éles környezetben nem valószínű, hogy szépen lesz
-vizualizálva a munkafa, így csak a git log parancs segítségével tudjuk
+vizualizálva a munkafa, így csak a `git log` parancs segítségével tudjuk
 megnézni a hasheket. Ezenfelül a hashek sokkal hosszabbak a való
 életben. A példa kedvéért mutatok egy hasht:
 fed2da64c0efc5293610bdd892f82a58e8cbc5d8
@@ -967,9 +759,9 @@ könnyű megjegyezni (pl.: branchek bugFix vagy a HEAD).
 
 Két egyszerű változatát fogom megmutatni:
 
-- Alkalmanként egy commitot ugrik felfelé \^
+- Alkalmanként egy commitot ugrik felfelé `^`
 
-- Alkalmanként bizonyos számú commitot ugrik felfelé \~\<szám\>
+- Alkalmanként bizonyos számú commitot ugrik felfelé `~<szám\>`
 
 #### (\^) karakter {#karakter}
 
@@ -987,7 +779,7 @@ bizonyos commitnak.</p>
 (C1)</p>
 <p>A main^^ pedig az ős szülője a main-nek. (C0)</p>
 <p>git checkout main^</p></th>
-<th><img src="media/image56.png"
+<th><img src="media/51.png"
 style="width:1.28842in;height:3.03284in" /></th>
 </tr>
 </thead>
@@ -1006,13 +798,13 @@ style="width:1.28842in;height:3.03284in" /></th>
 <thead>
 <tr class="header">
 <th colspan="2">Hivatkozhatsz a HEAD-re is, mint relatív ref.</th>
-<th><img src="media/image57.png"
+<th><img src="media/52.png"
 style="width:1.02214in;height:2.32665in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image58.png"
+<td><img src="media/53.png"
 style="width:1.36905in;height:2.28732in" /></td>
 <td colspan="2"><p>Ha egymás után használjuk párszor, akkor a C0
 commithoz érünk.</p>
@@ -1029,10 +821,7 @@ GitBashben is ki lehet próbálni valami hasonló végeredményt kell kapj.
 Ha még egyet ugranék akkor már a legelső commithoz érnék.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image59.png){width="4.48117125984252in"
-height="2.8372845581802273in"}
-
-[]{#_Toc179738269 .anchor}30. ábra -- git checkout HEAD\^
+leírás](media/54.png)
 
 #### (\~) karakter {#karakter-1}
 
@@ -1052,13 +841,13 @@ karaktert. Ez bemenetnek egy számot vár, hogy mennyit szeretnél ugrani.
 <tr class="header">
 <th colspan="2">Adjunk egy számot a (~) segítségével és menjünk vissza
 az időben.</th>
-<th><img src="media/image60.png"
+<th><img src="media/55.png"
 style="width:1.01531in;height:2.5084in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image61.png"
+<td><img src="media/56.png"
 style="width:1.34472in;height:2.30048in" /></td>
 <td colspan="2"><p>git checkout HEAD~4</p>
 <p>Ennyi és máris visszaugrottunk 4 commitot.</p></td>
@@ -1069,10 +858,7 @@ style="width:1.34472in;height:2.30048in" /></td>
 GitBashben most a legelső commitra ugrottam a tanultakat használva.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image62.png){width="4.284160104986877in"
-height="2.771104549431321in"}
-
-[]{#_Toc179738270 .anchor}31. ábra --git checkout HEAD\~2
+leírás](media/57.png)
 
 ## 9. Branch forcing {#branch-forcing}
 
@@ -1083,7 +869,7 @@ Az egyik leggyakoribb módja, ahogy használom az-az, hogy brancheket
 mozgatok ide-oda. Közvetlenül hozzá tudok rendelni egy branchet a -f
 segítségével egy commithoz valahogy így:
 
-git branch -f main HEAD\~3
+`git branch -f main HEAD\~3`
 
 Ez, így erőszakos módon rákényszeríti a main branchet, hogy a HEAD-hez
 viszonyítva 3 committal hátrébb küldje a main-t.
@@ -1118,13 +904,13 @@ arra a branchre, amit éppen használsz.</p></th>
 <thead>
 <tr class="header">
 <th colspan="2">Így néz ki valahogy a fánk most.</th>
-<th><img src="media/image63.png"
+<th><img src="media/58.png"
 style="width:0.9707in;height:2.23684in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image64.png"
+<td><img src="media/59.png"
 style="width:1.08316in;height:2.37824in" /></td>
 <td colspan="2"><p>Az előző parancsot:</p>
 <p>git branch -f main HEAD~3</p>
@@ -1140,10 +926,7 @@ HEAD áll branch azt nem tudod visszaállítani, így előtte át kell lépned
 egy másik branchre, én a bugFixbe vagyok és a mastert állítom vissza.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image65.png){width="4.865683508311461in"
-height="1.5923950131233595in"}
-
-[]{#_Toc179738271 .anchor}32. ábra -- git branch forcing
+leírás](media/60.png)
 
 ## 10. Változtatások visszaállítása {#változtatások-visszaállítása}
 
@@ -1162,7 +945,7 @@ hivatkozást mozgat vissza egy korábbi commitra. Olyan, mintha a
 történelmet írná újra. A git reset, úgy mozgatja vissza a branchet,
 mintha a commit, ahol vagyunk nem is létezett volna.
 
-git reset \<ref\>
+`git reset <ref>`
 
 #### Vizuálisan
 
@@ -1175,13 +958,13 @@ git reset \<ref\>
 <thead>
 <tr class="header">
 <th colspan="2">Nézzük meg hogyan módosul a fánk.</th>
-<th><img src="media/image66.png"
+<th><img src="media/61.png"
 style="width:1.02411in;height:2.53907in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image67.png"
+<td><img src="media/62.png"
 style="width:1.18937in;height:2.45644in" /></td>
 <td colspan="2"><p>Ha kiadjuk a következő parancsot, ezt kapjuk.</p>
 <p>git reset HEAD~1</p>
@@ -1199,10 +982,7 @@ változások ott maradnak, viszont a ---hard opcióval visszaáll a file az
 előző verzióra.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image68.png){width="4.562966972878391in"
-height="3.229083552055993in"}
-
-[]{#_Toc179738272 .anchor}33. ábra -- git reset -hard
+leírás](media/63.png)
 
 ### 10.2. git revert {#git-revert}
 
@@ -1225,13 +1005,13 @@ git revert
 <th colspan="2">Abban az esetben, ha a visszaállítással kapcsolatos
 változtatásokat megszeretnénk osztani másokkal a git revert parncsot
 kell használni.</th>
-<th><img src="media/image69.png"
+<th><img src="media/64.png"
 style="width:1.01187in;height:2.41691in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image70.png"
+<td><img src="media/65.png"
 style="width:1.08224in;height:2.63638in" /></td>
 <td colspan="2"><p>Adjuk ki a parancsot:</p>
 <p>git revert HEAD</p>
@@ -1247,10 +1027,7 @@ GitBashben bekúszott egy hangya.txt, amit elmentettünk a következő
 committal, amelyet a 34.ábra részletez.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image71.png){width="3.449580052493438in"
-height="4.301550743657043in"}
-
-[]{#_Toc179738273 .anchor}34. ábra -- git revert előkészület
+leírás](media/66.png)
 
 Majd kiadtam a git revert HEAD parancsot, ami azt csinálja, hogy
 létrehoz egy új commitott (Revert „AHH itt egy hangya" néven, ezt tudod
@@ -1261,10 +1038,7 @@ hangya.txt, és mivel arra a commitra hivatkoztunk a reverttel, ezáltal
 ez a fájl a 35.ábra HEAD commitjában már nem szerepel a hangya.txt.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image72.png){width="4.770283245844269in"
-height="1.2046653543307086in"}
-
-[]{#_Toc179738274 .anchor}35. ábra -- git revert eredménye
+leírás](media/67.png)
 
 A revert azért is jobb, mint reset, mivel a resettel teljesen törlődnek
 a változtatások, így ha estleg mégis szeretnénk használni azt a
@@ -1289,7 +1063,7 @@ másikat onnan, a harmadikat meg amonnan szeretném látni.
 A legelső parancs a git cherry-pick. A következő képpen néz ki a
 szintaktikája:
 
-git cherry-pick \<commit_1\> \<commit_2\> \<...\>
+`git cherry-pick <commit_1> <commit_2> <...>`
 
 Szimplán azt csinálja a parancs, hogy bizonyos commitokat másol az
 aktuális helyünk alá (HEAD).
@@ -1307,13 +1081,13 @@ aktuális helyünk alá (HEAD).
 <th colspan="2">Mondjuk azt, hogy van egy repositorynk és van már pár
 branchünk is benne a side, amit a mainbe szeretnénk másolni. Ezt
 eltudnánk érni a rebaselve is, de nézzük mit csinál a cherry-pick.</th>
-<th><img src="media/image73.png"
+<th><img src="media/68.png"
 style="width:1.77514in;height:2.33868in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image74.png"
+<td><img src="media/69.png"
 style="width:1.55571in;height:2.34923in" /></td>
 <td colspan="2"><p>A következő a parancs:</p>
 <p>git cherry-pick C2 C4</p>
@@ -1331,10 +1105,7 @@ a newImage branch képe (c10e6bc commit) és szerettem volna a hangya.txt
 is beletenni. (eec484a commit)
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image75.png){width="4.454172134733159in"
-height="2.8854899387576554in"}
-
-[]{#_Toc179738275 .anchor}36. ábra -- cherry-pick
+leírás](media/70.png)
 
 ### 11.2. git interactive rebase {#git-interactive-rebase}
 
@@ -1369,13 +1140,13 @@ parancsot:</p>
 <p>git rebase -i HEAD~4;</p>
 <p>A parancs megnyit egy UI-t, amely tartalmazza a HEAD előtt lévő 4
 commitot és ezekkel tudunk bűvészkedni.</p></th>
-<th><img src="media/image76.png"
+<th><img src="media/71.png"
 style="width:1.05689in;height:2.45815in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image77.png"
+<td><img src="media/72.png"
 style="width:2.45565in;height:2.61811in" /></td>
 <td colspan="2">Amit a UI-ban csináltam az-az, hogy a C4-es commitot nem
 akarom a munkába, illetve átrendeztem a commitok sorrendjét, így most C2
@@ -1389,16 +1160,10 @@ majd kiadtam a git rebase -i HEAD\~4 utasítást és megnyílt Vim-ben a UI
 (38.ábra), ami megkönnyíti a munkát.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image78.png){width="4.369837051618548in"
-height="1.1406277340332458in"}
-
-[]{#_Toc179738276 .anchor}37. ábra -- interactive branch
+leírás](media/73.png)
 
 ![A képen szöveg, képernyőkép látható Automatikusan generált
-leírás](media/image79.png){width="5.103257874015748in"
-height="4.249339457567804in"}
-
-[]{#_Toc179738277 .anchor}38. ábra -- interactive UI
+leírás](media/74.png)
 
 Valami hasonló UI kell, hogy megjelenjen nálad is. A 38.ábrán láthatod,
 hogy amelyik commit előtt pick van azt választottam ki, ami előtt drop
@@ -1410,10 +1175,7 @@ csinálna.
 A 39.ábrán pedig láthatod a végeredményt.
 
 ![A képen szöveg, képernyőkép, Betűtípus látható Automatikusan generált
-leírás](media/image80.png){width="5.286275153105862in"
-height="1.1339370078740159in"}
-
-[]{#_Toc179738278 .anchor}39. ábra -- interactive rebase végeredmény
+leírás](media/75.png)
 
 ## 12. Távoli repository {#távoli-repository}
 
@@ -1469,7 +1231,7 @@ szükségünk.
 Technikailag ez a parancs lesz hasznunkra, amikor helyi másolatokat
 szeretnél készíteni távoli repokról.
 
-git clone \<url\>
+`git clone <url>`
 
 Készíthetsz ennek a dokumentációnak a repojáról is egy másolatot akár a
 példa kedvéért.
@@ -1492,13 +1254,13 @@ repomat:
 <th colspan="2">Van egy távoli reponk, amely nagyon megtetszett vagy
 hasonló. Az a lényeg szeretnénk módosítgatni a mi saját
 számítógépünkön.</th>
-<th><img src="media/image83.png"
+<th><img src="media/76.png"
 style="width:1.19596in;height:1.68716in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image84.png"
+<td><img src="media/77.png"
 style="width:2.61052in;height:1.56382in" /></td>
 <td colspan="2"><p>Ha kiadjuk a parancsot:</p>
 <p>git clone &lt;url&gt;</p>
@@ -1508,14 +1270,13 @@ szélű).</p></td>
 </tbody>
 </table>
 
-### 12.2. Távoli branchek {#távoli-branchek}
+### 12.2. Távoli branchek
 
 Mint már feltűnhetett van némi változás a reponkban. Hozzuk az előző
 példa végeredményét:
 
 ![A képen képernyőkép, pink, Grafika, Magenta látható Automatikusan
-generált leírás](media/image84.png){width="3.9949048556430444in"
-height="2.3931299212598427in"}
+generált leírás](media/78.png)
 
 Van a távoli reponk (Fehér szagatott szegéllyel jobb oldalt). Ebben van
 egy main branch.
@@ -1532,11 +1293,11 @@ választva onnan, ahol éppen dolgozol. Ez azért van így, mert ezekben a
 távoli branchekben csak akkor fogod látni a változtatásaid, ha azokat
 meg is osztod másokkal.
 
-Mit jelent az o/?
+Mit jelent az `o/`?
 
 Két része van ennek a jelölésnek. A megjelenése pedig két dologtól függ:
 
-\<remote név\>/\<branch név\>
+`<remote név>/<branch név>`
 
 Ha megnézed a példát o/main, a branch név a main és a távoli reponak a
 neve o.
@@ -1556,24 +1317,24 @@ nevezi a távolit maint, amikor klónozol.
 <thead>
 <tr class="header">
 <th colspan="2">Vizsgáljunk meg egy távoli branchet.</th>
-<th><img src="media/image85.png"
+<th><img src="media/79.png"
 style="width:2.39006in;height:1.44742in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image86.png"
+<td><img src="media/80.png"
 style="width:2.49291in;height:2.57994in" /></td>
 <td colspan="2"><p>Adjuk ki a következő parancsot:</p>
 <p>git checkout o/main;</p>
-<p>git commit;</p>
+<p>```git commit```;</p>
 <p>Ahogy látjuk a git leválasztotta HEAD-et és nem frissítette az
 o/main-t, amikor egy új commitot hoztunk létre.</p></td>
 </tr>
 </tbody>
 </table>
 
-### 12.3. git fetch {#git-fetch}
+### 12.3. git fetch
 
 A következőkben megtanuljuk, hogyan lehet távolról adatokat lehívni.
 Ehhez a git fetch parancsot fogjuk használni.
@@ -1585,12 +1346,12 @@ A git fetch két fő dolgot hajt végre:
 - Letölti azokat a commitokat, amelyek a távoli repon megtalálhatóak
   és...
 
-- frissíti a helyi branch állapotát. Esetünkben ez a o/main
+- frissíti a helyi branch állapotát. Esetünkben ez a `o/main`
 
 Igazából ez a parancs szinkronba hozza a munkánkat a távoli repoval.
 
-A git fetch az interneten kommunikál a távoli repoval például https://
-vagy git:// protokollokat használva.
+A git fetch az interneten kommunikál a távoli repoval például `https://`
+vagy `git://` protokollokat használva.
 
 Fontos megjegyezni, hogy a parancs nem végez el minden változtatást a
 helyi számítógépünkön. Nem fogja frissíteni vagy változtatni a main
@@ -1614,13 +1375,13 @@ egy letöltési folyamat.
 <tr class="header">
 <th colspan="2">Van egy távoli branch, de az már előbbre tart, mint a mi
 helyi reponk. Nézzük, hogyan tudjuk ezt a problémát megoldani.</th>
-<th><img src="media/image87.png"
+<th><img src="media/81.png"
 style="width:2.46467in;height:2.53824in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image88.png"
+<td><img src="media/82.png"
 style="width:2.57221in;height:2.67536in" /></td>
 <td colspan="2"><p>Kiadjuk a parancsot</p>
 <p>git fetch</p>
@@ -1630,13 +1391,13 @@ a tanultak alapján.</p></td>
 </tbody>
 </table>
 
-### 12.4. git pull {#git-pull}
+### 12.4. `git pull`
 
 A távoli állapotra való frissítés annyira gyakori, hogy a Git
 kifejlesztett egy parancsot, ami nem csak letölti, hanem mergeli is a
-változásokat. Ez a parancs a git pull.
+változásokat. Ez a parancs a `git pull`.
 
-git pull
+`git pull`
 
 #### Vizuálisan
 
@@ -1649,13 +1410,13 @@ git pull
 <thead>
 <tr class="header">
 <th colspan="2">Mi történik a git pull közben?</th>
-<th><img src="media/image89.png"
+<th><img src="media/83.png"
 style="width:2.24576in;height:2.3304in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image90.png"
+<td><img src="media/84.png"
 style="width:2.80152in;height:2.56336in" /></td>
 <td colspan="2"><p>A parancs</p>
 <p>git pull</p>
@@ -1665,7 +1426,7 @@ git merge parancsot futatnunk.</p></td>
 </tbody>
 </table>
 
-### 12.5. git remote {#git-remote}
+### 12.5. git remote
 
 A git remote paranccsal be tudsz állítani egy távoli repot célnak, abban
 az esetben, ha nem clonoztál, hanem mondjuk elkezdtél lokálisan
@@ -1674,18 +1435,18 @@ például egy backupot csinálni egy felhőbe.
 
 Az alap utasítás így néz ki:
 
-git remote set-url origin \<url\>
+`git remote set-url origin <url>`
 
 Az url helyére ssh-t is állíthatsz, nem fontos https-t.
 
 Ellenőrizni is tudod, hogy valóban beállítottad-e célt az alábbi
 utasítással
 
-git remove -v
+`git remove -v`
 
 A kimenetben két sort kell látnod egyet fetchre egyet pushra.
 
-### 12.6. git config {#git-config}
+### 12.6. git config
 
 A config parancsokkal a felhasználó nevedet, email címedet stb. tudod
 beállítani, ezek szerepelnek a commitok mellett, ezért, ha másokkal
@@ -1693,20 +1454,20 @@ dolgozol értelmes neveket használj, hogy tudják ki vagy.
 
 Felhasználónév beállítást ezzel tudod megtenni:
 
-git config ---global user.name „neved"
+`git config ---global user.name „neved"`
 
 Email címet pedig ezzel tudsz beállítani:
 
-git config ---global user.email „email"
+`git config ---global user.email „email"`
 
-### 12.6. git push {#git-push}
+### 12.6. `git push`
 
 Szóval most már tudunk letölteni, de mi van azzal a munkával, amit én
 végeztem, azt mikor fogják látni a többiek?
 
-A git pull-nak az ellentéte a git push.
+A `git pull`-nak az ellentéte a `git push`.
 
-git push
+`git push`
 
 Ez felel azért, hogy bizonyos változtatások a commitjaidon felkerüljön a
 távoli repoba.
@@ -1723,22 +1484,22 @@ távoli repoba.
 <tr class="header">
 <th colspan="2">Nézd csináltam egy változtatást a távoli repohoz képest,
 de ott ez még nincs meg. Hogy tudom a változtatásomat megosztani?</th>
-<th><img src="media/image91.png"
+<th><img src="media/85.png"
 style="width:2.67371in;height:2.80841in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image92.png"
+<td><img src="media/86.png"
 style="width:2.38355in;height:2.44894in" /></td>
 <td colspan="2"><p>Lefutattom a</p>
-<p>git push</p>
+<p>```git push```</p>
 <p>parancsot és máris frissül a távoli repo is.</p></td>
 </tr>
 </tbody>
 </table>
 
-### 12.7. Verzió eltérés {#verzió-eltérés}
+### 12.7. Verzió eltérés
 
 Képzeld el, hogy egy vagy többen is dolgoztok egy távoli repon. Mondjuk
 te kiveszel egy hét szabit, egy csodálatos meleg nyári hétfőn. Mire
@@ -1747,7 +1508,7 @@ megosztottak egymás között, így az ő helyi repojuk a legfrissebb
 verziószámmal rendelkezik, viszont te is folytattad a munkádat, amikor
 visszamentél dolgozni és megszeretnéd azt osztani.
 
-Viszont, ha a git push parancsot használod, akkor most a távoli reponak
+Viszont, ha a `git push` parancsot használod, akkor most a távoli reponak
 visszakéne állítani magát egy régebbi verzióra? Megkéne próbálnia
 hozzáadni a te változtatásaidat miközben nem távolít el semmilyen újabb
 dolgot a fájlokból? Vagy szimplán a te munkádat kéne eldobnia, mondván a
@@ -1762,7 +1523,7 @@ hogyan teheted ezt meg.
 
 #### Vizuálisan
 
-##### git rebase {#git-rebase-1}
+##### git rebase
 
 <table>
 <colgroup>
@@ -1772,13 +1533,13 @@ hogyan teheted ezt meg.
 <thead>
 <tr class="header">
 <th>Most rebaseljünk, mielőtt pusholunk…</th>
-<th><img src="media/image93.png"
+<th><img src="media/87.png"
 style="width:2.49058in;height:2.61863in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image94.png"
+<td><img src="media/88.png"
 style="width:2.97472in;height:2.49396in" /></td>
 <td><p>Lefutatjuk a következő parancsokat:</p>
 <p>git fetch;</p>
@@ -1800,13 +1561,13 @@ style="width:2.97472in;height:2.49396in" /></td>
 <thead>
 <tr class="header">
 <th colspan="2">Természetesen mergel is megoldhatjuk a problémát.</th>
-<th><img src="media/image95.png"
+<th><img src="media/89.png"
 style="width:2.44004in;height:2.53863in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image96.png"
+<td><img src="media/90.png"
 style="width:2.80208in;height:2.97472in" /></td>
 <td colspan="2"><p>Parancsok:</p>
 <p>git fetch;</p>
@@ -1818,7 +1579,7 @@ mergeltük az új munkákat a mi munkánkba, majd megosztottuk azt.</p></td>
 </tbody>
 </table>
 
-##### git pull --rebase
+##### `git pull --rebase`
 
 <table>
 <colgroup>
@@ -1830,13 +1591,13 @@ mergeltük az új munkákat a mi munkánkba, majd megosztottuk azt.</p></td>
 <tr class="header">
 <th colspan="2">Természetesen ennek is van könnyebb módja, ami csak két
 sorba kerül.</th>
-<th><img src="media/image97.png"
+<th><img src="media/91.png"
 style="width:2.11827in;height:2.17609in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image98.png"
+<td><img src="media/92.png"
 style="width:2.4243in;height:2.0284in" /></td>
 <td colspan="2"><p>Parancs:</p>
 <p>git pull –rebase;</p>
@@ -1846,7 +1607,7 @@ style="width:2.4243in;height:2.0284in" /></td>
 </tbody>
 </table>
 
-##### git pull {#git-pull-1}
+##### `git pull`
 
 <table>
 <colgroup>
@@ -1857,13 +1618,13 @@ style="width:2.4243in;height:2.0284in" /></td>
 <thead>
 <tr class="header">
 <th colspan="2">És most lássuk sima pullal.</th>
-<th><img src="media/image99.png"
+<th><img src="media/92.png"
 style="width:2.30986in;height:2.33296in" /></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="media/image100.png"
+<td><img src="media/93.png"
 style="width:2.17545in;height:2.23059in" /></td>
 <td colspan="2"><p>Parancsok:</p>
 <p>git pull;</p>
@@ -1873,16 +1634,18 @@ style="width:2.17545in;height:2.23059in" /></td>
 </tbody>
 </table>
 
-## 13. Távoli repo frissítés eldobás {#távoli-repo-frissítés-eldobás}
+## 13. Távoli repo frissítés eldobás
 
 Ha egy nagy projekten dolgozol sok csapattal, nagy valószínűséggel Pull
 Requestet igényel az, hogy mergeld a munkádat. Amennyibben commitoltál a
 helyi main alá és megpróbálsz pusholni egy hasonló üzenet üdvözölhet:
 
+```
 ! \[remote rejected\] main -\> main (TF402455: Pushes to this branch are
 not permitted; you must use a pull request to update this branch.)
+```
 
-### 13.1. Miért dobta el? {#miért-dobta-el}
+### 13.1. Miért dobta el?
 
 Azért dobta el a commit pusholást, mivel a main szabályzat szerint pull
 requestet kell használni.
@@ -1892,7 +1655,7 @@ pusholod és egy pull requestet csinálsz, viszont elfelejtetted és
 közvetlenül mainra commiteltél. Most pedig nem tudod pusholni a
 változtatásaid.
 
-### 13.2. Megoldás {#megoldás}
+### 13.2. Megoldás
 
 Csinálj egy másik branchet pl. feature és pushold azt a távoli repoba.
 Majd hajts végre egy resetet a mainen, hogy szinkronba legyen a távoli
@@ -1953,99 +1716,3 @@ parancsok szerepelnek. Érdemes egy pillantást vetni hátha egyszer még
 hasznos lehet.
 
 <https://training.github.com/>
-
-# Ábrajegyzék
-
-[1. ábra -- Local Version Control Systems
-[0](#_Toc179738240)](#_Toc179738240)
-
-[2. ábra -- Centralized Version Control Systems
-[1](#_Toc179738241)](#_Toc179738241)
-
-[3. ábra -- Distributed Version Control Systems
-[1](#_Toc179738242)](#_Toc179738242)
-
-[4. ábra -- Git weboldala [0](#_Toc179738243)](#_Toc179738243)
-
-[5. ábra -- Telepítés Windowsra [0](#_Toc179738244)](#_Toc179738244)
-
-[6. ábra- Git installer license [1](#_Toc179738245)](#_Toc179738245)
-
-[7. ábra -- Git installer destination
-[1](#_Toc179738246)](#_Toc179738246)
-
-[8. ábra -- Git installer components
-[2](#_Toc179738247)](#_Toc179738247)
-
-[9. ábra -- Git installer start menu folder & default editor
-[2](#_Toc179738248)](#_Toc179738248)
-
-[10. ábra -- Git installer name of the initial branch & PATH environment
-[3](#_Toc179738249)](#_Toc179738249)
-
-[11. ábra -- Git installer SSH & HTTPS transport
-[3](#_Toc179738250)](#_Toc179738250)
-
-[12. ábra -- Git installer line endings & terminal
-[3](#_Toc179738251)](#_Toc179738251)
-
-[13. ábra -- Git installer behavior of git pull & credential helper
-[4](#_Toc179738252)](#_Toc179738252)
-
-[14. ábra -- Git installer extra options
-[4](#_Toc179738253)](#_Toc179738253)
-
-[15. ábra -- GitBashbe a git init parancs
-[5](#_Toc179738254)](#_Toc179738254)
-
-[16. ábra -- git status üres mappában
-[6](#_Toc179738255)](#_Toc179738255)
-
-[17. ábra -- git status állománnyal a mappában
-[6](#_Toc179738256)](#_Toc179738256)
-
-[18. ábra -- git add utasítás [7](#_Toc179738257)](#_Toc179738257)
-
-[19. ábra -- git rm [8](#_Toc179738258)](#_Toc179738258)
-
-[20. ábra - git commit [10](#_Toc179738259)](#_Toc179738259)
-
-[21. ábra -- git log [11](#_Toc179738260)](#_Toc179738260)
-
-[22. ábra -- git log -oneline [11](#_Toc179738261)](#_Toc179738261)
-
-[23. ábra -- git branchek [13](#_Toc179738262)](#_Toc179738262)
-
-[24. ábra -- branch különbségek [14](#_Toc179738263)](#_Toc179738263)
-
-[25. ábra -- git log newImage [14](#_Toc179738264)](#_Toc179738264)
-
-[26. ábra git log master [14](#_Toc179738265)](#_Toc179738265)
-
-[27. ábra mergelés [16](#_Toc179738266)](#_Toc179738266)
-
-[28. ábra -- git rebase [18](#_Toc179738267)](#_Toc179738267)
-
-[29. ábra -- git HEAD [20](#_Toc179738268)](#_Toc179738268)
-
-[30. ábra -- git checkout HEAD\^ [22](#_Toc179738269)](#_Toc179738269)
-
-[31. ábra --git checkout HEAD\~2 [23](#_Toc179738270)](#_Toc179738270)
-
-[32. ábra -- git branch forcing [25](#_Toc179738271)](#_Toc179738271)
-
-[33. ábra -- git reset -hard [27](#_Toc179738272)](#_Toc179738272)
-
-[34. ábra -- git revert előkészület
-[29](#_Toc179738273)](#_Toc179738273)
-
-[35. ábra -- git revert eredménye [29](#_Toc179738274)](#_Toc179738274)
-
-[36. ábra -- cherry-pick [31](#_Toc179738275)](#_Toc179738275)
-
-[37. ábra -- interactive branch [32](#_Toc179738276)](#_Toc179738276)
-
-[38. ábra -- interactive UI [33](#_Toc179738277)](#_Toc179738277)
-
-[39. ábra -- interactive rebase végeredmény
-[33](#_Toc179738278)](#_Toc179738278)
